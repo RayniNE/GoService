@@ -31,7 +31,7 @@ func NewServer() *Server {
 func (s *Server) routes() {
 	s.HandleFunc("/shopping-items", s.listShoppingItems).Methods("GET")
 	s.HandleFunc("/shopping-items", s.createShoppingItem).Methods("POST")
-	s.HandleFunc("/shopping-items", s.removeShoppingItem).Methods("DELETE")
+	s.HandleFunc("/shopping-items/{id}", s.removeShoppingItem).Methods("DELETE")
 }
 
 func (s *Server) createShoppingItem(w http.ResponseWriter, r *http.Request) {
