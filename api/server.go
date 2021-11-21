@@ -10,7 +10,7 @@ import (
 
 type Item struct {
 	ID   uuid.UUID `json:"id,omitempty"`
-	Name string    `json:"string,omitempty"`
+	Name string    `json:"name,omitempty"`
 }
 
 type Server struct {
